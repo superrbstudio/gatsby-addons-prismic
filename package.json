@@ -1,0 +1,25 @@
+{
+  "name": "@superrb/gatsby-addons-prismic",
+  "version": "0.0.0",
+  "description": "Addons for use with Gatsby + Prismic sites",
+  "main": "index.ts",
+  "repository": "git@github.com:superrbstudio/gatsby-addons-prismic.git",
+  "author": "James Dinsdale <hi@molovo.co>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@prismicio/react": "^2.5.0",
+    "gatsby": "^4.6.0",
+    "gatsby-source-prismic": "^5.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^17.0.43",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "prepare": "install-peers"
+  },
+  "dependencies": {
+    "install-peers-cli": "^2.2.0"
+  }
+}
