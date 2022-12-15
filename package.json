@@ -9,7 +9,8 @@
   "peerDependencies": {
     "@prismicio/react": "^2.5.0",
     "gatsby": "^4.6.0",
-    "gatsby-source-prismic": "^5.2.3"
+    "gatsby-source-prismic": "^5.2.3",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

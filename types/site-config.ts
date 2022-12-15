@@ -1,11 +1,13 @@
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 
 interface SiteConfig {
-  email_address: string
-  facebook_username: string
-  instagram_username: string
-  linkedin_username: string
-  twitter_username: string
+  data: {
+    email_address: string
+    facebook_username: string
+    instagram_username: string
+    linkedin_username: string
+    twitter_username: string
+  }
 }
 
 export const query = graphql`
