@@ -8,15 +8,17 @@ interface Props {
   field: RichTextType["richText"]
 }
 
-const RichText = ({ field }: Props) => {
+const RichText = ({ field, className = "" }: Props) => {
   return (
-    <PrismicRichText
-      field={field}
-      linkResolver={linkResolver}
-      internalLinkComponent={({ href, ...props }) => (
-        <Link to={href} {...props} />
-      )}
-    />
+    <div className={className}>
+      <PrismicRichText
+        field={field}
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, ...props }) => (
+          <Link to={href} {...props} />
+        )}
+      />
+    </div>
   )
 }
 
