@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 
 interface Props {
   field: RichTextType["richText"]
+  className?: string
 }
 
 const RichText = ({ field, className = "" }: Props) => {
