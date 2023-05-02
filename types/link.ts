@@ -4,6 +4,7 @@ interface Link {
   document?: string
   lang?: string
   link_type?: string
+  target?: string
   type?: string
   uid?: string
   url?: string
@@ -13,6 +14,7 @@ export const query = graphql`
   fragment Link on PrismicLinkType {
     lang
     link_type
+    target
     type
     uid
     url
