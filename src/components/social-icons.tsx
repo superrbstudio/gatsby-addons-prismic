@@ -52,6 +52,9 @@ const SocialIcons = () => {
         {siteConfig.data.behance_username && (
           <li class="social-icons__list-behance"><a href={siteConfig.data.behance_username} target="_blank"><span>Behance</span></a></li>
         )}
+        {siteConfig.data.spotify_username && (
+          <li class="social-icons__list-spotify"><a href={siteConfig.data.spotify_username} target="_blank"><span>Spotify</span></a></li>
+        )}
       </ul>
     </nav>
   )
