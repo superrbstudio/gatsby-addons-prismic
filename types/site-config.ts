@@ -16,6 +16,7 @@ interface SiteConfig {
     discord_username: string
     reddit_username: string
     behance_username: string
+    spotify_username: string
   }
 }
 
@@ -36,6 +37,7 @@ export const query = graphql`
       discord_username
       reddit_username
       behance_username
+      spotify_username
     }
   }
 `
