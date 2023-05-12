@@ -1,4 +1,4 @@
-import React, { memo } from "react"
+import React, { ForwardedRef, forwardRef, memo } from "react"
 import { RichText as RichTextType } from "../../types"
 import { PrismicRichText } from "@prismicio/react"
 import { linkResolver } from "ProjectRoot/src/utils/linkResolver"
@@ -9,18 +9,20 @@ interface Props {
   className?: string
 }
 
-const RichText = ({ field, className = "" }: Props) => {
-  return (
-    <div className={className}>
-      <PrismicRichText
-        field={field}
-        linkResolver={linkResolver}
-        internalLinkComponent={({ href, ...props }) => (
-          <Link to={href} {...props} />
-        )}
-      />
-    </div>
-  )
-}
+const RichText = forwardRef(
+  ({ field, className = "" }: Props, ref: ForwardedRef<HTMLDivElement>) => {
+    return (
+      <div className={className} ref={ref}>
+        <PrismicRichText
+          field={field}
+          linkResolver={linkResolver}
+          internalLinkComponent={({ href, ...props }) => (
+            <Link to={href} {...props} />
+          )}
+        />
+      </div>
+    )
+  }
+)
 
 export default memo(RichText)
