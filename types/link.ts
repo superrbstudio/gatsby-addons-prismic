@@ -11,7 +11,7 @@ interface Link {
 }
 
 export const query = graphql`
-  fragment Link on PrismicLinkType {
+  fragment Link on PrismicLinkField {
     lang
     link_type
     target

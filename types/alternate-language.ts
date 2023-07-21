@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby'
+import { graphql } from "gatsby"
 
 interface AlternateLanguage {
   lang: string
@@ -7,7 +7,7 @@ interface AlternateLanguage {
 }
 
 export const query = graphql`
-  fragment AlternateLanguage on PrismicAlternateLanguageType {
+  fragment AlternateLanguage on PrismicAlternateLanguage {
     lang
     type
     uid
