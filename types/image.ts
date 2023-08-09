@@ -1,4 +1,5 @@
 import { graphql } from "gatsby"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 export enum ImageLayout {
   none,
@@ -8,11 +9,8 @@ export enum ImageLayout {
 
 interface Image {
   alt: string
-  fluid: {
-    src: string
-    base64?: string
-    srcSet?: string
-  }
+  gatsbyImageData: IGatsbyImageData
+  url: string
 }
 
 export const query = graphql`
@@ -22,6 +20,7 @@ export const query = graphql`
       imgixParams: { q: 75, auto: "compress", fm: "webp" }
       breakpoints: [25, 750, 1080, 1366, 1920, 2560, 3840, 4096, 5120]
     )
+    url
   }
 `
 
