@@ -17,8 +17,10 @@ const Organisation = () => {
   }
 
   return (
-    <script type="application/ld+json">
-      {`
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: `
         {
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -39,8 +41,9 @@ const Organisation = () => {
             "addressCountry": "${organisation.data.address_country}"
           }
         }
-      `}
-    </script>
+      `,
+      }}
+    />
   )
 }
 
